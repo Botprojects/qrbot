@@ -2,3 +2,4 @@ pytelegrambotapi
 pyzbar
 segno
 qrcode
+pillow
