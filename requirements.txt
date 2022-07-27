@@ -1,5 +1,4 @@
 pytelegrambotapi
 pyzbar
-zbar
 segno
 qrcode
