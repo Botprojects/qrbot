@@ -20,7 +20,7 @@ def generateQr(msg):
     qrcode.save('qrImg.png',scale=3)
     with open('qrImg.png','rb') as qr:
         bot.send_photo(msg.chat.id,qr,reply_to_message_id=msg.message_id)
-    read_qr = decode(Image.open('qrImg.png'))
+    read_qr = decode(Image.open(qr))
     final = read_qr[0].data.decode('ascii')
     bot.send_message(msg.chat.id,final)
     
