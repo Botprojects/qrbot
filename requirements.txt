@@ -3,3 +3,4 @@ pyzbar
 segno
 qrcode
 pillow
+zbar
