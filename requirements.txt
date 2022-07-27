@@ -1,6 +1,3 @@
 pytelegrambotapi
-pyzbar
 segno
-qrcode
-pillow
-zbar
+python-opencv
