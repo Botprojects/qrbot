@@ -17,8 +17,8 @@ def generateQr(msg):
     qrcode.save('qrImg.png',scale=3)
     with open('qrImg.png','rb') as qr:
         bot.send_photo(msg.chat.id,qr,reply_to_message_id=msg.message_id)
-    read_qr = cv2.imread(qr)
-    bot.send_message(msg.chat.id,read_qr)
+        read_qr = cv2.imread(qr)
+        bot.send_message(msg.chat.id,read_qr)
     
 
 bot.infinity_polling()
