@@ -1,9 +1,6 @@
 
 import segno
-from PIL import Image
-import pyzbar
-from pyzbar.pyzbar import decode
-#import lib
+import cv2
 import telebot
 from telebot import TeleBot
 
@@ -20,9 +17,8 @@ def generateQr(msg):
     qrcode.save('qrImg.png',scale=3)
     with open('qrImg.png','rb') as qr:
         bot.send_photo(msg.chat.id,qr,reply_to_message_id=msg.message_id)
-    read_qr = decode(Image.open(qr))
-    final = read_qr[0].data.decode('ascii')
-    bot.send_message(msg.chat.id,final)
+    read_qr = cv2.imread(qr)
+    bot.send_message(msg.chat.id,read_qr)
     
 
 bot.infinity_polling()
