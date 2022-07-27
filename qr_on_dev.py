@@ -3,7 +3,7 @@ import segno
 from PIL import Image
 import pyzbar
 from pyzbar.pyzbar import decode
-
+#import lib
 import telebot
 from telebot import TeleBot
 
