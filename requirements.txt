@@ -1,4 +1,7 @@
 pytelegrambotapi
-segno
-opencv-python
+#segno
+#opencv-python
 pillow
+pypng
+qrtools
+pyqrcode
