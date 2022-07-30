@@ -27,7 +27,7 @@ bot.infinity_polling()
     
 
 import pyqrcode
-from qrtools import QR
+from qrtools.qrtools import QR
 import telebot
 from telebot import TeleBot
 
