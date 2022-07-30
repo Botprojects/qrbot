@@ -42,7 +42,7 @@ def generateQr(msg):
     text = msg.text
     qrcode = pyqrcode.create(text)
     qrcode.png('result.png',scale=4)
-    read_qr = qrtools.Qr()
+    read_qr = qrtools.QR()
     read_qr.decode('result.png')
     read = read_qr.data
     with open('result.png','rb') as qr:
