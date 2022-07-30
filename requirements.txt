@@ -5,3 +5,5 @@ pillow
 pypng
 qrtools
 pyqrcode
+zbar
+pyzbar
