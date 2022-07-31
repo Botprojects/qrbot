@@ -1,7 +1,11 @@
 
 
 import segno
-from cv2 import cv2
+
+try:
+    import cv2
+except ImportError:
+    cv2 = None
 import telebot
 from telebot import TeleBot
 
@@ -21,7 +25,7 @@ def generateQr(msg):
     read = detector.detectAndDecode(read_qr)
     with open('qr.png','rb') as qr:
         bot.send_photo(msg.chat.id,qr,reply_to_message_id=msg.message_id)
-        bot.reply_to(msg,read)
+        bot.reply_to(msg,read.text)
     
 bot.infinity_polling()
     
