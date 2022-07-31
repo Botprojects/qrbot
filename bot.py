@@ -8,7 +8,7 @@ except ImportError:
 import telebot
 from telebot import TeleBot
 
-bot = telebot.TeleBot('5418749173:AAHC7sk38lAoRf9GAD_9LrcmKbvZdVdM0HU')
+bot = telebot.TeleBot('5418749173:AAGM1iwM_T_IMaJ-Lh2Dfhd_weNos8IiPQQ')
 
 @bot.message_handler(commands=['start'])
 def welcome_message(msg):
