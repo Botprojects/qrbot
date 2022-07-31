@@ -1,7 +1,4 @@
 
-
-
-
 import segno
 
 try:
