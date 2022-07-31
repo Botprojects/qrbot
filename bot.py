@@ -4,7 +4,7 @@ import segno
 try:
     from cv2 import cv2
 except ImportError:
-    cv2 = None
+    print('work')
 import telebot
 from telebot import TeleBot
 
