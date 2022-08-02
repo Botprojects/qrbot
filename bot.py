@@ -1,6 +1,5 @@
 
-import segno
-
+import qrcode
 import telebot
 import cv2
 from telebot import TeleBot
@@ -14,8 +13,9 @@ def welcome_message(msg):
 @bot.message_handler(func=lambda m:True)
 def generateQr(msg):
     text = msg.text
-    qrcode = segno.make(text)
-    qrcode.save('qr.png',scale=3)
+    img = qrcode.make(text)
+    #img.save('qr.png',scale=3)
+    img.save("qr.png")
     with open('qr.png','rb') as qr:
         read_qr = cv2.imread(qr)
         detector = cv2.QRCodeDetector()
