@@ -1,4 +1,4 @@
-import segno
+#import segno
 import qrcode
 import telebot
 import cv2
