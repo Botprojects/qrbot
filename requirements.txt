@@ -1,4 +1,5 @@
 pytelegrambotapi
 qrcode
+segno
 opencv-python==3.3.0.10
 
