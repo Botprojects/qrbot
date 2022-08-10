@@ -20,7 +20,9 @@ def generateQr(msg):
         decode = cv2.QRCodeDetector()
         read,qrimg,qrd = decode.detectAndDecode(img)
         bot.send_photo(msg.chat.id,qr,reply_to_message_id=msg.message_id)
-        bot.reply_to(msg,read)
+        if qrimg is not None:
+            print(f"result: {read}")
+            bot.send_message(msg.chat.id,read)
 
 bot.infinity_polling()
     
