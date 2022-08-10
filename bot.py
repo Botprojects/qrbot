@@ -15,8 +15,8 @@ def generateQr(msg):
     text = msg.text
     qrcode = segno.make(text)
     qrcode.save('qr.png',scale=3)
+    img = cv2.imread("qr.png")
     with open('qr.png','rb') as qr:
-        img = cv2.imread(qr)
         decode = cv2.QRCodeDetector()
         read,qrimg,qrd = decode.detectAndDecode(img)
         show = cv2.imshow('result',img)
