@@ -1,3 +1,4 @@
 pytelegrambotapi
 segno
 opencv-python-headless
+numpy
